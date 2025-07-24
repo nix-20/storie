@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>150 Storielle Molto Lunghe e Bellissime</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@400;600&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(135deg, #f7f9fc, #e0e7f3);
+    color: #222;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0 15px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin: 30px 0 15px;
+    color: #2c3e50;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  }
+
+  #storia {
+    background: white;
+    max-width: 720px;
+    width: 100%;
+    min-height: 700px;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(44,62,80,0.15);
+    line-height: 1.8;
+    font-size: 1.15rem;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    user-select: text;
+    transition: opacity 0.5s ease;
+  }
+
+  /* Scrollbar per WebKit */
+  #storia::-webkit-scrollbar {
+    width: 10px;
+  }
+  #storia::-webkit-scrollbar-track {
+    background: #f0f4fa;
+    border-radius: 10px;
+  }
+  #storia::-webkit-scrollbar-thumb {
+    background: #4976d9;
+    border-radius: 10px;
+  }
+
+  button {
+    margin-top: 40px;
+    padding: 18px 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #4976d9, #2453b2);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(73,118,217,0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  button:hover {
+    background: linear-gradient(135deg, #2453b2, #4976d9);
+    box-shadow: 0 10px 24px rgba(73,118,217,0.6);
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+
+  @media (max-width: 800px) {
+    #storia {
+      padding: 30px 25px;
+      font-size: 1.05rem;
+      min-height: 600px;
+    }
+    button {
+      width: 100%;
+      padding: 18px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>150 Storielle Molto Lunghe e Bellissime</h1>
+<div id="storia" aria-live="polite" aria-atomic="true">Premi il bottone qui sotto per leggere una storia molto lunga e immersiva.</div>
+<button id="btnNuovaStoria" aria-label="Carica un'altra storia">Altra storia</button>
+
+<script>
+const protagonisti = [
+  "Elena, una giovane artista appassionata di pittura, con un animo sensibile e uno sguardo curioso sul mondo, che amava perdersi tra i colori e le sfumature più nascoste.",
+  "Marco, un esploratore coraggioso e inquieto, il cui passato misterioso aveva segnato ogni sua scelta e che cercava sempre un nuovo orizzonte da scoprire.",
+  "Sofia, una bibliotecaria con una curiosità insaziabile e un amore profondo per i libri antichi, capace di leggere tra le righe ciò che nessun altro poteva vedere.",
+  "Luca, un inventore brillante ma solitario, che passava le notti a perfezionare le sue creazioni, convinto che la scienza potesse cambiare il destino dell’umanità.",
+  "Giulia, una musicista di talento con un segreto nascosto, che soltanto pochi conoscevano, e che trovava nella musica il linguaggio con cui esprimere emozioni troppo profonde per essere dette."
+];
+
+const ambientazioni = [
+  "in una piccola città sulle coste del Mediterraneo, dove il mare raccontava storie antiche e il vento portava con sé profumi lontani.",
+  "tra le montagne innevate di un remoto villaggio alpino, avvolto da una coltre di neve e silenzio, dove ogni passo lasciava un’impronta indelebile nella neve fresca.",
+  "in una futuristica metropoli dove la tecnologia dominava ogni aspetto della vita quotidiana, e il cielo era tagliato da fili luminosi e droni silenziosi.",
+  "all’interno di un’antica biblioteca dimenticata dal tempo, con scaffali infiniti e segreti nascosti tra le pagine polverose dei manoscritti.",
+  "in un castello medievale immerso in una fitta foresta, custode di leggende e misteri, dove ogni pietra sembrava raccontare una storia di epoche lontane."
+];
+
+const eventi = [
+  "un giorno, mentre passeggiava tra le vie tortuose della città, trovò un diario antico che raccontava avventure incredibili e segreti perduti, che cambiarono per sempre la sua vita.",
+  "una notte tempestosa, fu svegliato da un suono misterioso proveniente dalla foresta vicina, un richiamo ancestrale che lo spinse a intraprendere un viaggio senza ritorno.",
+  "scoprì un passaggio segreto nascosto dietro una libreria, che conduceva a stanze dimenticate da secoli, ricche di misteri e conoscenze proibite.",
+  "incontrò un personaggio enigmatico, avvolto in un mantello scuro, che gli affidò un enigma complesso da risolvere, con la promessa di svelargli un potere antico.",
+  "trovò un oggetto magico, una piccola pietra che brillava di una luce propria e pulsante, capace di alterare il corso degli eventi e cambiare il destino di chi la possedeva."
+];
+
+const sviluppi = [
+  "Lungo il cammino, affrontò sfide inaspettate: prove di coraggio che misero alla prova il suo cuore, enigmi da risolvere con astuzia, e ostacoli da superare grazie alla forza della mente e dello spirito.",
+  "Le notti erano popolate da sogni vividi e inquietanti, che sembravano guidarlo verso una verità nascosta nelle pieghe del tempo.",
+  "Durante il viaggio, incontrò alleati preziosi, compagni di avventura che gli offrirono sostegno, amicizia sincera e consigli saggi nei momenti di dubbio.",
+  "Non mancarono momenti di paura e incertezza, quando l’oscurità sembrava avvolgere ogni speranza, ma la sua determinazione lo spinse a non arrendersi mai.",
+  "Con pazienza e ingegno, riuscì a svelare il mistero che avvolgeva il passato, scoprendo segreti dimenticati che cambiarono la sua visione del mondo.",
+  "Il tempo sembrava dilatarsi e contrarsi mentre affrontava pericoli sempre nuovi, ma ogni esperienza lo trasformava profondamente.",
+  "Tra le ombre del passato e la luce del futuro, trovò la forza per perdonare e ricominciare, lasciandosi alle spalle vecchie ferite.",
+  "Ogni passo lo avvicinava alla verità, ma anche a una scelta difficile, che avrebbe segnato per sempre il suo destino.",
+  "Gli incontri inaspettati lo portarono a riflettere su chi fosse veramente, mettendo in discussione ogni certezza che aveva fino a quel momento.",
+  "La natura stessa sembrava partecipare al suo viaggio, offrendogli segni e messaggi nascosti nei suoni del vento e nel fruscio delle foglie."
+];
+
+const dialoghi = [
+  `"Non temere, insieme riusciremo a superare ogni ostacolo," disse con voce ferma e rassicurante, guardandolo negli occhi con sincerità.`,
+  `"Ogni segreto ha un prezzo, e io sono disposto a pagarlo per scoprire la verità," rispose con determinazione, stringendo il pugno con forza.`,
+  `"Non è solo una pietra: è la speranza di un mondo migliore," sussurrò, mentre la luce emanata dall'oggetto illuminava la stanza buia.`,
+  `"Ti accompagnerò fino alla fine di questo viaggio, qualunque cosa accada," promise, prendendogli la mano con un sorriso incoraggiante.`,
+  `"A volte, per trovare se stessi, bisogna perdersi nel mistero," concluse con un sorriso enigmatico, lasciando aperta la porta dell’ignoto.`,
+  `"Non tutti sono ciò che sembrano, e non tutte le strade portano a casa," disse con un tono grave, avvertendolo del pericolo imminente.`,
+  `"Abbiamo il potere di cambiare il destino, ma dobbiamo scegliere con saggezza," rifletté ad alta voce, mentre osservava l'orizzonte infuocato dal tramonto.`,
+  `"Non dimenticare mai chi sei e da dove vieni," aggiunse, con un sorriso dolce ma deciso, mentre la notte calava intorno a loro.`,
+  `"Ogni scelta ha una conseguenza, e il tempo non aspetta nessuno," ricordò, mentre l'oscurità si faceva sempre più fitta.`,
+  `"La vera forza non sta nell'arma che impugni, ma nel cuore che hai," disse con convinzione, sfidando il silenzio che li circondava.`
+];
+
+const finali = [
+  "Alla fine del suo lungo viaggio, tornò a casa con il cuore colmo di nuove speranze e la consapevolezza di aver cambiato per sempre il proprio destino.",
+  "La storia che aveva vissuto si trasformò in leggenda, narrata di generazione in generazione con ammirazione e stupore, ispirando chiunque l’ascoltasse.",
+  "Con un sorriso sereno e lo sguardo rivolto al futuro, capì che ogni fine è solo un nuovo inizio, pronto a vivere nuove avventure e scoperte.",
+  "Il mistero risolto aprì le porte a nuove strade inesplorate, lasciando il suo cammino aperto verso l’ignoto e l’infinito.",
+  "E così, tra le ombre e la luce, la sua vita si trasformò in una melodia eterna che riecheggiava nel tempo, un racconto senza fine."
+];
+
+// Generatore di storia lunga e dettagliata (stesso schema ma più paragrafo e alternanza)
+function generaStoriaLunga() {
+  let testo = "";
+  // Introduzione
+  testo += "C'era una volta " + scegliRandom(protagonisti) + " " + scegliRandom(ambientazioni) + "\n\n";
+  // Evento scatenante
+  testo += "Un giorno, " + scegliRandom(eventi) + "\n\n";
+  // Sviluppo articolato
+  for(let i=0; i<5; i++) {
+    testo += scegliRandom(sviluppi) + "\n\n";
+    // Inserisco dialoghi ogni 2 paragrafi
+    if(i % 2 === 1) {
+      testo += scegliRandom(dialoghi) + "\n\n";
+    }
+  }
+  // Finale evocativo
+  testo += scegliRandom(finali) + "\n";
+  return testo;
+}
+
+function scegliRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+const storiaDiv = document.getElementById("storia");
+const btn = document.getElementById("btnNuovaStoria");
+
+function mostraStoria() {
+  // Effetto fade out
+  storiaDiv.style.opacity = '0';
+  setTimeout(() => {
+    storiaDiv.textContent = generaStoriaLunga();
+    // Effetto fade in
+    storiaDiv.style.opacity = '1';
+  }, 400);
+}
+
+// Evento click
+btn.addEventListener("click", mostraStoria);
+
+// Mostra subito una storia all'apertura
+mostraStoria();
+</script>
+
+</body>
+</html>
