@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Le Storielle</title>
+<style>
+  body {
+    background: #fdf6e3;
+    color: #333;
+    font-family: "Georgia", serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    line-height: 1.6;
+  }
+  h1 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #586e75;
+    letter-spacing: 0.1em;
+  }
+  #capitolo {
+    white-space: pre-wrap;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #859900;
+    padding-left: 1rem;
+    background: #f0e6d2;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+  button {
+    background-color: #2aa198;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(42,161,152,.5);
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #268a7a;
+  }
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+  <h1>Le Storielle</h1>
+  <div id="capitolo"></div>
+  <button id="nextBtn">Nuovo Capitolo</button>
+  <footer>© 2025 Le Storielle - Tutti i diritti riservati</footer>
+
+<script>
+const capitoli = [
+`Capitolo 1: L’alba di un destino
+
+Nella valle di Eldoria, avvolta dalla nebbia del primo mattino, sorgeva il piccolo villaggio di Thalor, un luogo dove il tempo sembrava scorrere lento, scandito dal canto degli uccelli e dal fruscio degli alberi antichi. In quel villaggio viveva Arion, un giovane dal cuore inquieto e dallo sguardo curioso, che desiderava più di ogni cosa conoscere il mondo oltre le montagne.
+
+Da quando era bambino, Arion ascoltava le storie narrate dagli anziani attorno al fuoco: leggende di eroi dimenticati, regni perduti e magie nascoste. Ma nessuna favola lo aveva mai affascinato come quella della Sfera di Luce, un artefatto magico capace di illuminare anche le tenebre più fitte e di portare pace nelle terre sconvolte dalla guerra.
+
+Ogni giorno, Arion sognava di partire alla ricerca di quella sfera, di affrontare pericoli e scoprire verità nascoste, ma il villaggio era un posto sicuro e tranquillo, e il pensiero di lasciare la famiglia gli stringeva il cuore. Tuttavia, un evento inaspettato cambiò tutto.
+
+Una sera, mentre il cielo si tingeva di rosa e le stelle iniziavano a brillare, una figura misteriosa apparve alla porta della sua casa: una donna anziana, vestita di mantelli scintillanti e con occhi profondi come il mare. Si presentò come Maelia, la custode della saggezza, e gli parlò di un pericolo imminente: una minaccia oscura che avrebbe inghiottito Eldoria se la Sfera di Luce non fosse stata trovata in tempo.
+
+Arion sentì la responsabilità gravargli sulle spalle, ma anche la determinazione accendersi nel cuore. Con l’aiuto di Maelia, preparò il suo zaino, salutò la famiglia e si incamminò verso l’ignoto, ignaro di quanto quella scelta avrebbe cambiato per sempre il suo destino.`,
+
+`Capitolo 2: Il sentiero delle ombre
+
+Il giorno seguente, Arion si addentrò nel fitto della Foresta di Verdan, un luogo che si diceva abitato da spiriti antichi e creature mai viste dagli uomini. L’aria era fresca, profumata di muschio e terra umida, ma un’ombra sottile sembrava avvolgere ogni cosa, come un sussurro di mistero.
+
+Camminava lungo il sentiero stretto e tortuoso, con gli occhi sempre attenti a ogni movimento tra i rami. A un certo punto, un fruscio improvviso attirò la sua attenzione: una piccola figura emerse da dietro un albero, una creatura minuta con ali di farfalla e occhi luminosi.
+
+“Non temere, Arion,” disse la creatura con voce dolce. “Sono Lira, la guardiana della foresta. Sono qui per guidarti oltre questo luogo, ma prima devi dimostrare il tuo cuore puro.”
+
+La sfida era semplice ma impegnativa: Arion doveva attraversare un ponte sospeso sopra un baratro senza lasciare che la paura lo paralizzasse. Mentre il vento soffiava forte e il ponte scricchiolava sotto i suoi piedi, il giovane respirò a fondo, concentrandosi sul passo successivo e sul desiderio di proteggere il suo villaggio.
+
+Alla fine del ponte, Lira sorrise e gli offrì una piccola pietra incantata, simbolo di coraggio e luce. “Portala con te, ti proteggerà dalle tenebre,” disse, prima di scomparire tra gli alberi.
+
+Il cammino proseguì, e Arion sentiva dentro di sé crescere una forza nuova, pronta a sfidare qualunque pericolo.`,
+
+`Capitolo 3: Il villaggio dei silenzi
+
+Dopo giorni di marcia, Arion raggiunse un piccolo villaggio ai piedi delle montagne, chiamato Silenora. Lì, tutto era stranamente silenzioso: le case vuote, le strade deserte, e nessun suono di vita umana.
+
+Esplorando con cautela, Arion scoprì che gli abitanti erano scomparsi misteriosamente, lasciando dietro di sé solo oggetti personali e segni di una fuga improvvisa. Mentre cercava indizi, un vecchio manoscritto attirò la sua attenzione: parlava di una maledizione antica scatenata da un’ombra oscura che si era impossessata del villaggio.
+
+Determinato a svelare il mistero, Arion si addentrò nelle rovine del tempio centrale, dove trovò un altare con una gemma nera incastonata al centro. Appena la toccò, un’ondata di oscurità lo avvolse, portandolo in una visione: vedeva Silenora avvolta nelle tenebre, con gli abitanti intrappolati in una prigione invisibile.
+
+Con la pietra di Lira stretta in mano, Arion lottò contro la disperazione e pronunciò parole di speranza e luce, spezzando la maledizione. Il villaggio lentamente tornò alla vita, e gli abitanti, grati, donarono ad Arion una mappa antica che indicava la strada verso la Montagna Ombra, dove si diceva fosse nascosta la Sfera di Luce.`,
+
+`Capitolo 4: La salita delle prove
+
+La montagna si ergeva maestosa e imponente, con le sue cime avvolte dalle nuvole e il vento gelido che sferzava le rocce. Arion iniziò la scalata, consapevole che ogni passo poteva significare la differenza tra la vita e la morte.
+
+Il sentiero era disseminato di prove, ognuna pensata per mettere alla prova non solo la forza fisica, ma anche la mente e lo spirito. La prima sfida fu attraversare una caverna di cristalli, dove ogni riflesso poteva ingannare e confondere, rischiando di perdere la via.
+
+Mentre avanzava con cautela, Arion sentì una voce dentro di sé, un sussurro che gli ricordava i suoi scopi e il motivo per cui era partito. Con quella determinazione, trovò il centro della caverna e raccolse un cristallo luminoso, segno di saggezza.
+
+La seconda prova fu affrontare un branco di lupi ombra, creature spettrali che proteggevano il cammino. Arion non aveva armi, ma con la pietra di Lira riuscì a creare una barriera di luce che li tenne a distanza, dimostrando che a volte la forza vera sta nel coraggio e nella gentilezza.
+
+Quando raggiunse la cima, esausto ma determinato, trovò un’antica porta scolpita con rune misteriose. Era l’ingresso al santuario dove la Sfera di Luce riposava, custodita da un ultimo enigma.`,
+
+`Capitolo 5: La luce eterna
+
+Arion varcò la soglia del santuario, dove un silenzio sacro riempiva l’aria. Al centro, su un piedistallo di marmo, brillava la Sfera di Luce, emanando un bagliore caldo e avvolgente.
+
+Ma non era solo: un’ombra scura si stagliò davanti a lui, la manifestazione del male che aveva minacciato Eldoria per generazioni. La creatura tentò di spaventarlo con visioni di paura e fallimento, ma Arion, forte dell’esperienza e degli insegnamenti raccolti, resistette.
+
+Con la pietra di Lira in una mano e la Sfera nell’altra, pronunciò parole antiche di speranza e rinascita. La luce si diffuse in tutto il santuario, dissolvendo l’oscurità e purificando la valle sottostante.
+
+Arion tornò a Thalor da eroe, portando con sé la promessa di un futuro luminoso. La sua avventura non era solo la ricerca di un oggetto, ma il cammino di crescita di un giovane che aveva imparato a vincere le proprie paure e a credere nella forza del cuore.`
+];
+
+let indiceCapitolo = 0;
+
+const mostraCapitolo = () => {
+  const div = document.getElementById("capitolo");
+  div.textContent = capitoli[indiceCapitolo];
+};
+
+const bottone = document.getElementById("nextBtn");
+bottone.addEventListener("click", () => {
+  if (indiceCapitolo < capitoli.length - 1) {
+    indiceCapitolo++;
+    mostraCapitolo();
+  } else {
+    alert("Hai letto tutti i capitoli!");
+  }
+});
+
+// Mostra il primo capitolo all’avvio
+mostraCapitolo();
+</script>
+</body>
+</html>
